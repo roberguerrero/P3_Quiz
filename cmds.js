@@ -193,7 +193,8 @@ exports.playCmd = rl => {
 };
 
 exports.creditsCmd = rl => {
-	log(`Autor de la práctica:  '${colorize("Roberto Guerrero Valdés", 'green')}'.`);
+	log("Autor de la práctica:");
+	log("Roberto Guerrero Valdés", 'green');
 	rl.prompt();
 };
 
