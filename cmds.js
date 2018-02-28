@@ -115,8 +115,8 @@ exports.testCmd = (rl, id) => {
 
 			rl.question(colorize(`Pregunta: ${quiz.question}? => `, 'red'), resp => {
 				if((resp.toLowerCase().trim()) === ((quiz.answer).toLowerCase().trim())) {
-					biglog('CORRECTO', 'green');
-				} else {biglog('INCORRECTO', 'red')}
+					log('CORRECTO', 'green');
+				} else {log('INCORRECTO', 'red')}
 				rl.prompt();
 			});
 
@@ -169,15 +169,15 @@ exports.playCmd = rl => {
 
 			rl.question(colorize(`Pregunta: ${quiz.question}? => `, 'red'), resp => {
 					if((resp.toLowerCase().trim()) === ((quiz.answer).toLowerCase().trim())) {
-						biglog('CORRECTO', 'green');
+						log('CORRECTO', 'green');
 						score = score +1;
-						biglog(`Tu puntuación es: ${score}`, 'blue');
+						log(`Tu puntuación es: ${score}`, 'blue');
 						//log(`el id de la pregunta es: ${id}`);
 						//log('los que quedan son:');
 						//funccc();
 						playOne();
 					} else {
-						biglog('INCORRECTO', 'red')
+						log('INCORRECTO', 'red')
 						biglog(`Puntos finales: ${score}`, 'blue');
 						rl.prompt();
 					}
