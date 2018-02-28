@@ -181,7 +181,7 @@ exports.playCmd = rl => {
 						biglog(`Puntos finales: ${score}`, 'blue');
 						rl.prompt();
 					}
-					rl.prompt();
+					//rl.prompt();
 				});
 
 
@@ -193,8 +193,8 @@ exports.playCmd = rl => {
 };
 
 exports.creditsCmd = rl => {
-	//log("Autor de la práctica:");
-	log("roberguerrero", 'green');
+	log("Autor de la práctica:");
+	log("Roberto Guerrero Valdés", 'green');
 	rl.prompt();
 };
 
