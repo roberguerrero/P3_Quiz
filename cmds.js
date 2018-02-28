@@ -28,8 +28,6 @@ exports.listCmd = rl => {
 		log(`[${colorize(id, 'magenta')}]: ${quiz.question}`);
 	});
 
-
-
 	rl.prompt();
 };
 
@@ -72,11 +70,6 @@ exports.deleteCmd = (rl, id) => {
 			errorlog(error.message);
 		}
 	} 
-
-
-
-
-
 	rl.prompt();
 };
 
@@ -120,7 +113,6 @@ exports.testCmd = (rl, id) => {
 				} else {log('INCORRECTO', 'red')}
 				rl.prompt();
 			});
-
 
 
 		} catch (error) {
@@ -185,8 +177,6 @@ exports.playCmd = rl => {
 					}
 					//rl.prompt();
 				});
-
-
 		}
 	}
 
