@@ -116,6 +116,7 @@ exports.testCmd = (rl, id) => {
 			rl.question(colorize(`Pregunta: ${quiz.question}? => `, 'red'), resp => {
 				if((resp.toLowerCase().trim()) === ((quiz.answer).toLowerCase().trim())) {
 					log('CORRECTO', 'green');
+					
 				} else {log('INCORRECTO', 'red')}
 				rl.prompt();
 			});
