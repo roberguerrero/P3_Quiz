@@ -222,7 +222,7 @@ exports.playCmd = rl => {
 		.then (() => {
 
 			if (toBePlayed.length <= 0) {
-				log("Fin del juego");
+				//log("Fin del juego");
 				return; // Para no continuar y pasar al siguiente then
 			}
 
@@ -240,7 +240,8 @@ exports.playCmd = rl => {
 									  // se ejecuta en segundo plano
 
 				} else {
-					log('INCORRECTO', 'red')	
+					log('INCORRECTO', 'red')
+					log("Fin del juego");	
 				}
 			})
 		})
@@ -260,6 +261,7 @@ exports.playCmd = rl => {
 		errorlog("Error: " + e);
 	})
 	.then(() => {
+
 		log(`Tu puntuación es: ${score}`);
 		rl.prompt();
 	})
